@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "imhere",
-    "slug": "imhere",
+    "name": "ignite-app",
+    "slug": "ignite-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
