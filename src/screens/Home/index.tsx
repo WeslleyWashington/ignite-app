@@ -34,19 +34,20 @@ export function Home() {
 
   return (
     <View style={styles.container}>
+      <View style={styles.Name}>
       <Text style={styles.eventName}>
-        Grupo JL de Negocios
+        Área de Usuários
       </Text>
-
       <Text style={styles.eventDate}>
-        Quinta, 06 de Julho de 2023
+        Ano: 2023
       </Text>
+      </View>
 
       <View style={styles.form}>
         <TextInput 
           style={styles.input}
           placeholder="Nome do participante"
-          placeholderTextColor="#6B6B6B"
+          placeholderTextColor="#9b9b9b"
           onChangeText={setParticipantName}
           value={participantName}
         />

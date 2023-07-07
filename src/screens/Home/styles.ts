@@ -5,15 +5,24 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#131016',
     padding: 24
+    
+  },
+  Name: {
+    flex: 1,
+    backgroundColor: '#131016',
+    alignItems: 'center'
+    
   },
   eventName: {
     color: '#FFF',
     fontSize: 24,
     fontWeight: 'bold',
     marginTop: 48
+    
+    
   },
   eventDate: {
-    color: '#6B6B6B',
+    color: '#969696',
     fontSize: 16
   },
   input: {
@@ -25,6 +34,7 @@ export const styles = StyleSheet.create({
     padding: 16,
     fontSize: 16,
     marginRight: 12
+
   },
   buttonText: {
     color: '#FFF',
@@ -34,7 +44,7 @@ export const styles = StyleSheet.create({
     width: 56,
     height: 56,
     borderRadius: 5,
-    backgroundColor: '#31CF67',
+    backgroundColor: '#13BF43',
     alignItems: 'center',
     justifyContent: 'center'
   },
