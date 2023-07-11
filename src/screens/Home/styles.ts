@@ -1,5 +1,5 @@
 import { url } from "inspector";
-import { ImageBackground, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
@@ -33,7 +33,7 @@ export const styles = StyleSheet.create({
   input: {
     flex: 1,
     height: 56,
-    backgroundColor: '#000000d9',
+    backgroundColor: '#000000cc',
     borderRadius: 5,
     color: '#FFFF',
     padding: 16,
