@@ -1,15 +1,20 @@
-import { StyleSheet } from "react-native";
+import { url } from "inspector";
+import { ImageBackground, StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#131016',
-    padding: 24
+    padding: 15
+    
+  },
+  imageBackground: {
+    flex: 1,
+    justifyContent: 'center',
     
   },
   Name: {
     flex: 1,
-    backgroundColor: '#131016',
+    marginTop: 30,
     alignItems: 'center'
     
   },
@@ -52,10 +57,11 @@ export const styles = StyleSheet.create({
     width: '100%',
     flexDirection: 'row',
     marginTop: 36,
-    marginBottom: 42
+    marginBottom: 42,
+    
   },
   listEmptyText: {
-    color: '#FFF',
+    color: 'black',
     fontSize: 14,
     textAlign: 'center'
   }

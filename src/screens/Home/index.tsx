@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Alert, FlatList, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Alert, FlatList, ImageBackground, Text, TextInput, TouchableOpacity, View } from "react-native";
 
 import { Participant } from "../components/Participant";
 
 import { styles } from "./styles";
+import { url } from "inspector";
 
 export function Home() {
   const [participants, setParticipants] = useState<string[]>([]);
@@ -32,50 +33,56 @@ export function Home() {
     ])
   }
 
+  
+
   return (
-    <View style={styles.container}>
-      <View style={styles.Name}>
-      <Text style={styles.eventName}>
-        Área de Usuários
-      </Text>
-      <Text style={styles.eventDate}>
-        Ano: 2023
-      </Text>
-      </View>
-
-      <View style={styles.form}>
-        <TextInput 
-          style={styles.input}
-          placeholder="Nome do participante"
-          placeholderTextColor="#9b9b9b"
-          onChangeText={setParticipantName}
-          value={participantName}
-        />
+    <ImageBackground  source={require('../../img/fundoimg.png')} resizeMode="cover" style={styles.imageBackground}>
+      <View style={styles.container}>
         
-        <TouchableOpacity style={styles.button} onPress={handleParticipantAdd}>
-          <Text style={styles.buttonText}>
-            +
+          <View style={styles.Name}>
+          <Text style={styles.eventName}>
+            Área de Usuários
           </Text>
-        </TouchableOpacity>
-      </View>
+          <Text style={styles.eventDate}>
+            Ano: 2023
+          </Text>
+          </View>
 
-      <FlatList 
-        data={participants}
-        keyExtractor={(item) => item}
-        renderItem={({ item }) => (
-          <Participant 
-            key={item} 
-            name={item} 
-            onRemove={() => handleParticipantRemove(item)} 
+          <View style={styles.form}>
+            <TextInput 
+              style={styles.input}
+              placeholder="Nome do participante"
+              placeholderTextColor="#9b9b9b"
+              onChangeText={setParticipantName}
+              value={participantName}
+            />
+            
+            <TouchableOpacity style={styles.button} onPress={handleParticipantAdd}>
+              <Text style={styles.buttonText}>
+                +
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          <FlatList 
+            data={participants}
+            keyExtractor={(item) => item}
+            renderItem={({ item }) => (
+              <Participant 
+                key={item} 
+                name={item} 
+                onRemove={() => handleParticipantRemove(item)} 
+              />
+            )}
+            showsVerticalScrollIndicator={false}
+            ListEmptyComponent={() => (
+              <Text style={styles.listEmptyText}>
+                Ninguém chegou no evento ainda? Adicione participantes a sua lista de presença.
+              </Text>
+            )}
           />
-        )}
-        showsVerticalScrollIndicator={false}
-        ListEmptyComponent={() => (
-          <Text style={styles.listEmptyText}>
-            Ninguém chegou no evento ainda? Adicione participantes a sua lista de presença.
-          </Text>
-        )}
-      />
-    </View>
+          
+      </View>
+    </ImageBackground>
   )
 }
