@@ -26,14 +26,14 @@ export const styles = StyleSheet.create({
     
     
   },
-  eventDate: {
+  eventSubName: {
     color: '#969696',
     fontSize: 16
   },
   input: {
     flex: 1,
     height: 56,
-    backgroundColor: '#1F1E25',
+    backgroundColor: '#000000a6',
     borderRadius: 5,
     color: '#FFFF',
     padding: 16,
@@ -61,7 +61,7 @@ export const styles = StyleSheet.create({
     
   },
   listEmptyText: {
-    color: 'black',
+    color: 'white',
     fontSize: 14,
     textAlign: 'center'
   }

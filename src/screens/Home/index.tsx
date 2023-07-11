@@ -43,8 +43,8 @@ export function Home() {
           <Text style={styles.eventName}>
             Área de Usuários
           </Text>
-          <Text style={styles.eventDate}>
-            Ano: 2023
+          <Text style={styles.eventSubName}>
+            adicione e remova usuários
           </Text>
           </View>
 
