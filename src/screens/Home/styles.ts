@@ -27,13 +27,13 @@ export const styles = StyleSheet.create({
     
   },
   eventSubName: {
-    color: '#969696',
+    color: 'black',
     fontSize: 16
   },
   input: {
     flex: 1,
     height: 56,
-    backgroundColor: '#000000a6',
+    backgroundColor: '#000000d9',
     borderRadius: 5,
     color: '#FFFF',
     padding: 16,
